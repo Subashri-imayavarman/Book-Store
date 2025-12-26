@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Dreamy Pages</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <style>
+        body {
+            background-color: #f3e5f5;
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+        header {
+            background: #6a1b9a;
+            width: 100%;
+            padding: 15px;
+            text-align: center;
+            color: white;
+            font-size: 20px;
+            position: fixed;
+            top: 0;
+            left: 0;
+        }
+        .contact-container {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 80%;
+            max-width: 500px;
+            margin-top: 80px;
+        }
+        h2 {
+            color: #6a1b9a;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        input, textarea, select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #b39ddb;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+        button {
+            background-color: #6a1b9a;
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #4a148c;
+        }
+        .social-links {
+            margin-top: 20px;
+        }
+        .social-links a {
+            margin: 0 10px;
+            color: #6a1b9a;
+            font-size: 20px;
+            text-decoration: none;
+        }
+        .social-links a:hover {
+            color: #4a148c;
+        }
+        .footer {
+            margin-top: 20px;
+            text-align: center;
+            font-size: 14px;
+            color: #666;
+        }
+        .success-message {
+            display: none;
+            color: #4CAF50;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>Dreamy Pages - Contact Us</header>
+
+    <div class="contact-container">
+        <h2>Get in Touch</h2>
+        <form id="contact-form">
+            <input type="text" id="name" placeholder="Your Name" required>
+            <input type="email" id="email" placeholder="Your Email" required>
+            <input type="tel" id="phone" placeholder="Your Phone Number (Optional)">
+            <select id="subject">
+                <option value="">Select Inquiry Type</option>
+                <option value="Order Issue">Order Issue</option>
+                <option value="Book Recommendation">Book Recommendation</option>
+                <option value="Partnership">Partnership</option>
+                <option value="Other">Other</option>
+            </select>
+            <textarea id="message" placeholder="Your Message" rows="5" required></textarea>
+            <button type="submit">Send Message</button>
+            <p class="success-message" id="success-message">Message Sent Successfully!</p>
+        </form>
+
+        <div class="social-links">
+            <a href="#">Facebook</a>
+            <a href="#">Twitter</a>
+            <a href="#">Instagram</a>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>&copy; 2025 Dreamy Pages. All rights reserved.</p>
+    </div>
+
+    <script>
+        document.getElementById("contact-form").addEventListener("submit", function(event) {
+            event.preventDefault();
+            document.getElementById("success-message").style.display = "block";
+            setTimeout(() => {
+                document.getElementById("success-message").style.display = "none";
+            }, 3000);
+            this.reset();
+        });
+    </script>
+
+</body>
+</html>

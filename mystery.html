@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mystery Books - Dreamy Pages</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #ede7f6;
+            color: #444;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        header {
+            background-color: #4527a0;
+            padding: 20px;
+            text-align: center;
+            color: white;
+            border-bottom: 3px solid #311b92;
+        }
+        .book-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+            flex: 1;
+        }
+        .book {
+            background: #d1c4e9;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 200px;
+            transition: transform 0.3s, background 0.3s;
+        }
+        .book img {
+            width: 100px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+        .book:hover {
+            background: #b39ddb;
+            transform: scale(1.05);
+        }
+        .add-to-cart {
+            display: block;
+            margin: 10px auto;
+            padding: 8px;
+            background-color: #311b92;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        .add-to-cart:hover {
+            background-color: #4527a0;
+        }
+        .back-btn {
+            display: block;
+            width: 150px;
+            margin: 20px auto;
+            padding: 10px;
+            text-align: center;
+            background-color: #311b92;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+        }
+        .back-btn:hover {
+            background-color: #4527a0;
+        }
+        footer {
+            background-color: #311b92;
+            padding: 15px;
+            text-align: center;
+            margin-top: auto;
+            color: white;
+            border-top: 3px solid #4527a0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Mystery Books</h1>
+    </header>
+
+    <section>
+        <div class="book-container">
+            <div class="book">
+                <img src="D:\form.html\IMG-20250223-WA0047.jpg" alt="Sherlock Holmes">
+                <h3>The Complete Sherlock Holmes</h3>
+                <p>Arthur Conan Doyle</p>
+                <p>₹499</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="book">
+                <img src="D:\form.html\IMG-20250223-WA0045.jpg" alt="Gone Girl">
+                <h3>Gone Girl</h3>
+                <p>Gillian Flynn</p>
+                <p>₹459</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="book">
+                <img src="D:\form.html\IMG-20250223-WA0041.jpg" alt="Murder on the Orient Express">
+                <h3>Murder on the Orient Express</h3>
+                <p>Agatha Christie</p>
+                <p>₹399</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="book">
+                <img src="D:\form.html\IMG-20250223-WA0042.jpg" alt="The Girl on the Train">
+                <h3>The Girl on the Train</h3>
+                <p>Paula Hawkins</p>
+                <p>₹499</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="book">
+                <img src="D:\form.html\IMG-20250223-WA0043.jpg" alt="The Da Vinci Code">
+                <h3>The Da Vinci Code</h3>
+                <p>Dan Brown</p>
+                <p>₹529</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+        </div>
+        <a href="books.html" class="back-btn">Back to Books</a>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Dreamy Pages Bookstore. All rights reserved.</p>
+    </footer>
+</body>
+</html>

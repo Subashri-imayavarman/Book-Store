@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Self-Help Books</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e3f6f5;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        header {
+            background-color: #66bfbf;
+            padding: 20px;
+            text-align: center;
+            border-bottom: 3px solid #4ca9a9;
+        }
+        .book-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+            flex: 1;
+        }
+        .book {
+            background: #ffffff;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 220px;
+            transition: transform 0.3s, background 0.3s;
+        }
+        .book img {
+            width: 120px;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+        .book:hover {
+            background: #dff3f3;
+            transform: scale(1.05);
+        }
+        .back-btn {
+            display: block;
+            width: 150px;
+            margin: 20px auto;
+            padding: 10px;
+            text-align: center;
+            background-color: #4ca9a9;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+        }
+        .back-btn:hover {
+            background-color: #3b8d8d;
+        }
+        footer {
+            background-color: #66bfbf;
+            padding: 15px;
+            text-align: center;
+            margin-top: auto;
+            border-top: 3px solid #4ca9a9;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Best Self-Help Books</h1>
+    </header>
+
+    <section>
+        <div class="book-container">
+            <div class="book">
+                <img src="atomic.jpg" alt="Atomic Habits">
+                <h3>Atomic Habits</h3>
+                <p>James Clear</p>
+            </div>
+            <div class="book">
+                <img src="powernow.jpg" alt="The Power of Now">
+                <h3>The Power of Now</h3>
+                <p>Eckhart Tolle</p>
+            </div>
+            <div class="book">
+                <img src="subtleart.jpg" alt="The Subtle Art of Not Giving a F*ck">
+                <h3>The Subtle Art of Not Giving a F*ck</h3>
+                <p>Mark Manson</p>
+            </div>
+            <div class="book">
+                <img src="richdad.jpg" alt="Rich Dad Poor Dad">
+                <h3>Rich Dad Poor Dad</h3>
+                <p>Robert Kiyosaki</p>
+            </div>
+            <div class="book">
+                <img src="7habits.jpg" alt="The 7 Habits of Highly Effective People">
+                <h3>The 7 Habits of Highly Effective People</h3>
+                <p>Stephen R. Covey</p>
+            </div>
+            <div class="book">
+                <img src="thinkgrow.jpg" alt="Think and Grow Rich">
+                <h3>Think and Grow Rich</h3>
+                <p>Napoleon Hill</p>
+            </div>
+        </div>
+        <a href="books.html" class="back-btn">Back to Books</a>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Pastel Bookstore. All rights reserved.</p>
+    </footer>
+</body>
+</html>

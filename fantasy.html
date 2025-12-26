@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fantasy Books - Dreamy Pages</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f3e5f5;
+            color: #5a3d5c;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        header {
+            background: #e1bee7;
+            padding: 20px;
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+            border-bottom: 3px solid #ba68c8;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        .book-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 30px;
+            flex: 1;
+        }
+        .book {
+            background: #f8bbd0;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            width: 220px;
+            transition: transform 0.3s, background 0.3s;
+        }
+        .book img {
+            width: 120px;
+            height: 170px;
+            object-fit: cover;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .book:hover {
+            background: #f48fb1;
+            transform: scale(1.05);
+        }
+        .add-to-cart {
+            display: block;
+            margin: 12px auto;
+            padding: 10px;
+            background-color: #ba68c8;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: bold;
+            color: white;
+            font-size: 14px;
+        }
+        .add-to-cart:hover {
+            background-color: #9c27b0;
+        }
+        .back-btn {
+            display: block;
+            width: 160px;
+            margin: 25px auto;
+            padding: 12px;
+            text-align: center;
+            background-color: #ba68c8;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 8px;
+            font-size: 16px;
+        }
+        .back-btn:hover {
+            background-color: #9c27b0;
+        }
+        footer {
+            background: #e1bee7;
+            padding: 15px;
+            text-align: center;
+            margin-top: auto;
+            border-top: 3px solid #ba68c8;
+            box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+    <script>
+        function addToCart(bookName, bookPrice, bookImage) {
+            let cart = JSON.parse(localStorage.getItem("cart")) || [];
+            cart.push({ name: bookName, price: bookPrice, image: bookImage });
+            localStorage.setItem("cart", JSON.stringify(cart));
+            alert(bookName + " has been added to the cart!");
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Fantasy Collection - Dreamy Pages</h1>
+    </header>
+    <section>
+        <div class="book-container">
+            <div class="book">
+                <img src="D:\form2.html\harry.jpeg" alt="Harry Potter">
+                <h3>Harry Potter and the Sorcerer's Stone</h3>
+                <p>J.K. Rowling</p>
+                <p>₹499</p>
+                <button class="add-to-cart" onclick="addToCart('Harry Potter and the Sorcerer\'s Stone', 499, 'hp_sorcerers.jpg')">Add to Cart</button>
+            </div>
+            <div class="book">
+                <img src="D:\form.html\IMG-20250223-WA0039.jpg" alt="The Lord of the Rings">
+                <h3>The Lord of the Rings</h3>
+                <p>J.R.R. Tolkien</p>
+                <p>₹699</p>
+                <button class="add-to-cart" onclick="addToCart('The Lord of the Rings', 699, 'lotr.jpg')">Add to Cart</button>
+            </div>
+            <div class="book">
+                <img src="D:\form.html\IMG-20250223-WA0047.jpg" alt="The Chronicles of Narnia">
+                <h3>The Chronicles of Narnia</h3>
+                <p>C.S. Lewis</p>
+                <p>₹450</p>
+                <button class="add-to-cart" onclick="addToCart('The Chronicles of Narnia', 450, 'narnia.jpg')">Add to Cart</button>
+            </div>
+        </div>
+        <a href="books.html" class="back-btn">Back to Books</a>
+    </section>
+    <footer>
+        <p>&copy; 2025 Dreamy Pages. All rights reserved.</p>
+    </footer>
+</body>
+</html>

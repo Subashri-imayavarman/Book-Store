@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dreamy Pages - Books</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f3e5f5;
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #6a1b9a;
+            color: white;
+            padding: 15px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 10%;
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+        .logo img {
+            height: 50px;
+            margin-right: 10px;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        nav a[href="books.html"] {
+            background-color: #d1c4e9;
+        }
+        .categories {
+            text-align: center;
+            padding: 40px 10%;
+        }
+        .category-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+        .category-item {
+            background-color: #d1c4e9;
+            padding: 20px;
+            border-radius: 10px;
+            width: 200px;
+            text-align: center;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.3s, transform 0.2s;
+        }
+        .category-item:hover {
+            background-color: #b39ddb;
+            transform: scale(1.05);
+        }
+        .category-item a {
+            text-decoration: none;
+            color: #4a148c;
+            display: block;
+        }
+        footer {
+            background-color: #4a148c;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="D:\form.html\3c7af3c03a1fc34f679d6cb8d1af703a.jpg" alt="Dreamy Pages Logo">
+            <h1>Dreamy Pages</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="books.html">Books</a></li>
+                <li><a href="aboutus.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="cart.html">🛒 Cart</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="categories">
+        <h2>Book Categories</h2>
+        <div class="category-list">
+            <div class="category-item"><a href="fiction.html">Fiction</a></div>
+            <div class="category-item"><a href="nonfiction.html">Non-Fiction</a></div>
+            <div class="category-item"><a href="mystery.html">Mystery</a></div>
+            <div class="category-item"><a href="sciencefiction.html">Science Fiction</a></div>
+            <div class="category-item"><a href="fantasy.html">Fantasy</a></div>
+            <div class="category-item"><a href="selfhelp.html">Self-Help</a></div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Dreamy Pages Bookstore. All rights reserved.</p>
+    </footer>
+</body>
+</html>
